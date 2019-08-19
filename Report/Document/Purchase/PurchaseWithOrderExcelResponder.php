@@ -20,8 +20,8 @@ final class PurchaseWithOrderExcelResponder extends AbstractPurchaseWithOrderRes
      */
     public function getResponse(Purchase $purchase): StreamedResponse
     {
-        $html = $this->htmlView->getHtml($purchase);
+        $html = $this->purchaseWithOrderHtmlView->getHtml($purchase);
 
-        return $this->excelFileResponder->getExcelFileResponse($html, $this->htmlView->getName());
+        return $this->excelFileResponder->getExcelFileResponse($html, $this->getName());
     }
 }

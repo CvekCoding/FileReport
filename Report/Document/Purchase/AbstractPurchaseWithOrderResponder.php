@@ -6,11 +6,11 @@ namespace App\Utils\ExportService\Document\Purchase;
 
 abstract class AbstractPurchaseWithOrderResponder
 {
-    protected $htmlView;
+    protected $purchaseWithOrderHtmlView;
 
     public function __construct(PurchaseWithOrderHtmlView $purchaseWithOrderHtmlView)
     {
-        $this->htmlView = $purchaseWithOrderHtmlView;
+        $this->purchaseWithOrderHtmlView = $purchaseWithOrderHtmlView;
     }
 
     /**
