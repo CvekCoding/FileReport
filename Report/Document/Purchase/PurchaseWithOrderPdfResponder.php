@@ -5,20 +5,18 @@ declare(strict_types=1);
 namespace App\Utils\ExportService\Document\Purchase;
 
 use App\Entity\Main\Purchase;
-use App\Utils\ExportService\PdfFileResponder;
+use App\Utils\ExportService\ImportPdfResponderTrait;
 use Knp\Bundle\SnappyBundle\Snappy\Response\PdfResponse;
 
-final class PurchaseWithOrderPdfResponder
+final class PurchaseWithOrderPdfResponder extends AbstractPurchaseWithOrderResponder
 {
-    private $pdfFileResponder;
-    private $htmlView;
+	use ImportPdfResponderTrait;
 
-    public function __construct(PdfFileResponder $pdfFileResponder, PurchaseWithOrderHtmlView $htmlView)
-    {
-        $this->pdfFileResponder = $pdfFileResponder;s
-        $this->htmlView = $htmlView;
-    }
-
+	/**
+	 * @param Purchase $purchase
+	 *
+	 * @return PdfResponse
+	 */
     public function getResponse(Purchase $purchase): PdfResponse
     {
         $html = $this->htmlView->getHtml($purchase);

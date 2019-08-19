@@ -5,19 +5,12 @@ declare(strict_types=1);
 namespace App\Utils\ExportService\Document\Purchase;
 
 use App\Entity\Main\Purchase;
-use App\Utils\ExportService\ExcelFileResponder;
+use App\Utils\ExportService\ImportExcelResponderTrait;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 
-final class PurchaseWithOrderExcelResponder
+final class PurchaseWithOrderExcelResponder extends AbstractPurchaseWithOrderResponder
 {
-    private $excelFileResponder;
-    private $htmlView;
-
-    public function __construct(ExcelFileResponder $excelFileResponder, PurchaseWithOrderHtmlView $htmlView)
-    {
-        $this->excelFileResponder = $excelFileResponder;
-        $this->htmlView = $htmlView;
-    }
+	use ImportExcelResponderTrait;
 
     /**
      * @param Purchase $purchase

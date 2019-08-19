@@ -23,12 +23,4 @@ final class PurchaseWithOrderHtmlView extends AbstractTwigView
             'selectedPurchase' => $purchase,
         ]);
     }
-
-    /**
-     * @return string
-     */
-    public function getName(): string
-    {
-        return 'Order Details';
-    }
 }
