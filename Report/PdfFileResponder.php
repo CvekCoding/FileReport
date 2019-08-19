@@ -36,11 +36,12 @@ final class PdfFileResponder
      *
      * @return PdfResponse
      */
-    public function getPdfResponse(string $html,
+    public function getPdfResponse(
+        string $html,
                                    string $reportName,
                                    string $caption = null,
-                                   bool $landscape = null): PdfResponse
-    {
+                                   bool $landscape = null
+    ): PdfResponse {
         $landscape = $landscape ?? false;
         $orientation = $landscape ? 'Landscape' : 'Portrait';
 

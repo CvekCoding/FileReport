@@ -13,11 +13,11 @@ abstract class AbstractPurchaseWithOrderResponder
         $this->htmlView = $purchaseWithOrderHtmlView;
     }
 
-	/**
-	 * @return string
-	 */
-	public function getName(): string
-	{
-		return 'Order Details';
-	}
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return 'Order Details';
+    }
 }

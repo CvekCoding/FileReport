@@ -6,16 +6,16 @@ namespace App\Utils\ExportService;
 
 trait ImportPdfResponderTrait
 {
-	/** @var PdfFileResponder */
-	protected $pdfFileResponder;
+    /** @var PdfFileResponder */
+    protected $pdfFileResponder;
 
-	/**
-	 * @required
-	 *
-	 * @param PdfFileResponder $pdfFileResponder
-	 */
-	public function setPdfFileResponder(PdfFileResponder $pdfFileResponder): void
-	{
-		$this->pdfFileResponder = $pdfFileResponder;
-	}
+    /**
+     * @required
+     *
+     * @param PdfFileResponder $pdfFileResponder
+     */
+    public function setPdfFileResponder(PdfFileResponder $pdfFileResponder): void
+    {
+        $this->pdfFileResponder = $pdfFileResponder;
+    }
 }

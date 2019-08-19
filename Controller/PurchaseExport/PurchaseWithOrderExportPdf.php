@@ -17,11 +17,11 @@ final class PurchaseWithOrderExportPdf
         $this->responder = $responder;
     }
 
-	/**
-	 * @param Purchase $data
-	 *
-	 * @return Response
-	 */
+    /**
+     * @param Purchase $data
+     *
+     * @return Response
+     */
     public function __invoke(Purchase $data): Response
     {
         return $this->responder->getResponse($data);

@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 
 final class PurchaseWithOrderExcelResponder extends AbstractPurchaseWithOrderResponder
 {
-	use ImportExcelResponderTrait;
+    use ImportExcelResponderTrait;
 
     /**
      * @param Purchase $purchase

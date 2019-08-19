@@ -10,13 +10,13 @@ use Knp\Bundle\SnappyBundle\Snappy\Response\PdfResponse;
 
 final class PurchaseWithOrderPdfResponder extends AbstractPurchaseWithOrderResponder
 {
-	use ImportPdfResponderTrait;
+    use ImportPdfResponderTrait;
 
-	/**
-	 * @param Purchase $purchase
-	 *
-	 * @return PdfResponse
-	 */
+    /**
+     * @param Purchase $purchase
+     *
+     * @return PdfResponse
+     */
     public function getResponse(Purchase $purchase): PdfResponse
     {
         $html = $this->htmlView->getHtml($purchase);
