@@ -11,17 +11,4 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 final class PurchaseWithOrderExcelResponder extends AbstractPurchaseWithOrderResponder
 {
     use ImportExcelResponderTrait;
-
-    /**
-     * @param Purchase $purchase
-     *
-     * @return StreamedResponse
-     * @throws \PhpOffice\PhpSpreadsheet\Reader\Exception
-     */
-    public function getResponse(Purchase $purchase): StreamedResponse
-    {
-        $html = $this->purchaseWithOrderHtmlView->getHtml($purchase);
-
-        return $this->excelFileResponder->getExcelFileResponse($html, $this->getName());
-    }
 }

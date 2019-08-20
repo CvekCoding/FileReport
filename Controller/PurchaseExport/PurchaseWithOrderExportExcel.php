@@ -21,8 +21,6 @@ final class PurchaseWithOrderExportExcel
      * @param Purchase $data
      *
      * @return Response
-     *
-     * @throws \PhpOffice\PhpSpreadsheet\Reader\Exception
      */
     public function __invoke(Purchase $data): Response
     {

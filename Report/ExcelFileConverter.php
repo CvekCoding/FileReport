@@ -14,7 +14,7 @@ use Yectep\PhpSpreadsheetBundle\Factory;
 /**
  * @internal
  */
-final class ExcelFileResponder
+final class ExcelFileConverter implements HtmlConverterInterface
 {
     public const DEFAULT_WRITER = 'Xlsx';
     public const FILE_EXTENSION = 'xlsx';
@@ -34,7 +34,7 @@ final class ExcelFileResponder
      *
      * @throws \PhpOffice\PhpSpreadsheet\Reader\Exception
      */
-    public function getExcelFileResponse(string $html, string $fileName): StreamedResponse
+    public function getResponse(string $html, string $fileName, array $optionals = null): Response
     {
         $spreadsheet = $this->createSpreadsheetFromHtml($html);
         $streamedResponse = $this->excelFactory->createStreamedResponse($spreadsheet, self::DEFAULT_WRITER);

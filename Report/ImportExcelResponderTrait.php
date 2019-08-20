@@ -6,16 +6,24 @@ namespace App\Utils\ExportService;
 
 trait ImportExcelResponderTrait
 {
-    /** @var ExcelFileResponder */
-    protected $excelFileResponder;
+    /** @var ExcelFileConverter */
+    protected $excelConverter;
 
     /**
      * @required
      *
-     * @param ExcelFileResponder $excelFileResponder
+     * @param ExcelFileConverter $excelConverter
      */
-    public function setExcelFileResponder(ExcelFileResponder $excelFileResponder): void
+    public function setExcelConverter(ExcelFileConverter $excelConverter): void
     {
-        $this->excelFileResponder = $excelFileResponder;
+        $this->excelConverter = $excelConverter;
     }
+
+	/**
+	 * @return ExcelFileConverter
+	 */
+	public function getExcelConverter(): HtmlConverterInterface
+	{
+		return $this->excelConverter;
+	}
 }

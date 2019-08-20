@@ -22,6 +22,6 @@ final class PurchaseWithOrderPdfResponder extends AbstractPurchaseWithOrderRespo
         $html = $this->purchaseWithOrderHtmlView->getHtml($purchase);
         $caption = "Vendor: {$purchase->getLocationVendor()->getName()}";
 
-        return $this->pdfFileResponder->getPdfResponse($html, $this->getName(), $caption);
+        return $this->pdfConverter->getPdfResponse($html, $this->getName(), $caption);
     }
 }

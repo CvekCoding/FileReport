@@ -6,16 +6,24 @@ namespace App\Utils\ExportService;
 
 trait ImportPdfResponderTrait
 {
-    /** @var PdfFileResponder */
-    protected $pdfFileResponder;
+    /** @var PdfFileConverter */
+    protected $pdfConverter;
 
     /**
      * @required
      *
-     * @param PdfFileResponder $pdfFileResponder
+     * @param PdfFileConverter $pdfConverter
      */
-    public function setPdfFileResponder(PdfFileResponder $pdfFileResponder): void
+    public function setPdfConverter(PdfFileConverter $pdfConverter): void
     {
-        $this->pdfFileResponder = $pdfFileResponder;
+        $this->pdfConverter = $pdfConverter;
     }
+
+	/**
+	 * @return PdfFileConverter
+	 */
+	public function getPdfConverter(): HtmlConverterInterface
+	{
+		return $this->pdfConverter;
+	}
 }
