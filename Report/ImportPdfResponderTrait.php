@@ -19,11 +19,11 @@ trait ImportPdfResponderTrait
         $this->pdfConverter = $pdfConverter;
     }
 
-	/**
-	 * @return PdfFileConverter
-	 */
-	public function getPdfConverter(): HtmlConverterInterface
-	{
-		return $this->pdfConverter;
-	}
+    /**
+     * @return PdfFileConverter
+     */
+    public function getPdfConverter(): HtmlConverterInterface
+    {
+        return $this->pdfConverter;
+    }
 }

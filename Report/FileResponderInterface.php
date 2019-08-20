@@ -5,5 +5,5 @@ namespace App\Utils\ExportService;
 
 interface FileResponderInterface
 {
-	public function getHtmlConverter(): HtmlConverterInterface;
+    public function getHtmlConverter(): HtmlConverterInterface;
 }

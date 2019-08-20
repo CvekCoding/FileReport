@@ -19,11 +19,11 @@ trait ImportExcelResponderTrait
         $this->excelConverter = $excelConverter;
     }
 
-	/**
-	 * @return ExcelFileConverter
-	 */
-	public function getExcelConverter(): HtmlConverterInterface
-	{
-		return $this->excelConverter;
-	}
+    /**
+     * @return ExcelFileConverter
+     */
+    public function getExcelConverter(): HtmlConverterInterface
+    {
+        return $this->excelConverter;
+    }
 }
